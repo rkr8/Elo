@@ -11,7 +11,7 @@ This is a small recreation of the Elo rating system.
 To use this library, simply include `Elo.h` in your program.
 Here is an example, that shows the most important functions of this library:
 
-```
+```cpp
 ...
 
 // include namespaces
