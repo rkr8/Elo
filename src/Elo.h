@@ -1,42 +1,28 @@
+#include <string>
+
 #ifndef ELO_H
 #define ELO_H
 
-#include <iostream>
-#include <cmath>
-#include <string>
-
 namespace Elo {
 
-using namespace std;
+	using namespace std;
 
-namespace Constants {
+	struct Player {
+		string name;
+		double elo;
+	};
 
-const double HARDNESS = 10.;
+	enum Result {
+		WIN, DRAW, LOSE
+	};
 
-}
+	const double HARDNESS = 10.;
 
-namespace Types {
+	double getResultAsDouble(Result&);
 
-struct Player {
-	string name;
-	double elo;
-};
+	double estimateWinningChance(Player&, Player&);
 
-enum Result {
-	WIN, DRAW, LOSE
-};
-
-}
-
-namespace Methods {
-
-double getResultAsDouble(const Types::Result&);
-
-double estimateWinningChange(Types::Player&, Types::Player&);
-
-void changeElo(Types::Player&, Types::Player&, const Types::Result&);
-
-}
+	void changeElo(Player&, Player&, Result&);
 
 }
 
