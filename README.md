@@ -1,5 +1,9 @@
 # Elo
 
+## Badges
+
+[![Build Status](https://travis-ci.org/rkr8/Elo.svg?branch=master)](https://travis-ci.org/rkr8/Elo)
+
 ## Description
 
 ### About
