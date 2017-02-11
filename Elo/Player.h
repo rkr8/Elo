@@ -11,12 +11,14 @@ namespace Elo {
     const string DEFAULT_NAME = "";
     const double DEFAULT_ELO = 1000.;
     
+    /*
+     * This class stores the name and Elo of a player.
+     */
     class Player {
     private:
         string name;
 		double elo;
     public:
-        // reference for better performance
         Player(const string &n = DEFAULT_NAME, double e = DEFAULT_ELO) : name(n), elo(e) {}
         // getters
         const string& getName() const {
@@ -34,6 +36,7 @@ namespace Elo {
         }
 	};
     
+    // makes the output via the << operator possible
     ostream& operator<<(ostream &o, const Player &p) {
         o << p.getName() << ", " << p.getElo();
     }

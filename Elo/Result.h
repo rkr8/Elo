@@ -7,6 +7,11 @@ namespace Elo {
     
     using namespace std;
     
+    /*
+     * This class stores information about the
+     * outcome of a game and converts them to
+     * a numeric value.
+     */
     class Result {
     public:
         enum Possibilities {
@@ -42,6 +47,7 @@ namespace Elo {
         }
     };
     
+    // makes the output via the << operator possible
     ostream& operator<<(ostream &o, const Result &r) {
         switch(r.getOutcome()) {
         case Result::WIN:
