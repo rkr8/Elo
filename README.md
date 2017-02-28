@@ -13,7 +13,7 @@ This is a small recreation of the Elo rating system.
 ### How to
 
 To use this library, simply include `Elo/Elo.h` in your program.
-Here is an example, that shows the most important functions of this library:
+Here is an example, that shows the most important features of this library:
 
     #include <iostream>
     #include "Elo/Elo.h"
@@ -27,8 +27,8 @@ Here is an example, that shows the most important functions of this library:
         Player p("Magnus Carlsen", 2840.);
         Player q("Viswanathan Anand", 2786.);
         
-        // generate the game
-        Game g(p, q);
+        // generate the game object
+        Game g(10., p, q);
 
         // Magnus Carlsen won
         Result r(Result::WIN);
@@ -42,3 +42,5 @@ Here is an example, that shows the most important functions of this library:
         
         return 0;
     }
+
+To build and run this example, clone the repository and run `make && ./example`.

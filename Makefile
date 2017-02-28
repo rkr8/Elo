@@ -1,2 +1,2 @@
-build: Elo/Elo.h Elo/Game.h Elo/Player.h Elo/Result.h
+build: Elo/*
 	g++ -o example example.cpp

@@ -10,8 +10,8 @@ int main() {
     Player p("Magnus Carlsen", 2840.);
     Player q("Viswanathan Anand", 2786.);
     
-    // generate the game
-    Game g(p, q);
+    // generate the game object
+    Game g(10., p, q);
 
     // Magnus Carlsen won
     Result r(Result::WIN);

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "Player.h"
 
 #ifndef __GAME_H__
 #define __GAME_H__
@@ -7,9 +8,6 @@
 namespace Elo {
 
     using namespace std;
-
-    // this value specifies the impact of each game
-    const double HARDNESS = 10.;
     
     /*
      * This class represents one game. It holds
@@ -17,12 +15,15 @@ namespace Elo {
      * updates their Elo if a result is clear.
      */
     class Game {
+    public:
+        // this constant value specifies the impact of each game
+        const double HARDNESS;
     private:
         // reference is needed for updating the Elo
         Player &playerA;
         Player &playerB;
     public:
-        Game(Player &a, Player &b) : playerA(a), playerB(b) {}
+        Game(double h, Player &a, Player &b) : HARDNESS(h), playerA(a), playerB(b) {}
         // getters
         const Player& getPlayerA() const {
             return playerA;
