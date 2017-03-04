@@ -1,2 +1,2 @@
-build: Elo/*
-	g++ -o example example.cpp
+example: Elo/*
+	g++ example.cpp -o example
