@@ -14,22 +14,33 @@ namespace Elo {
      */
     class Result {
     public:
-        enum Possibilities {
+        enum Possibility {
             WIN,
             DRAW,
             LOSE
         };
     private:
-        Possibilities outcome;
+        Possibility outcome;
     public:
-        Result(const Possibilities &o = DRAW) : outcome(o) {}
+        Result(const Possibility &o = DRAW) : outcome(o) {}
         // getters
-        const Possibilities& getOutcome() const {
+        const Possibility& getOutcome() const {
             return outcome;
         }
         // setters
-        void setOutcome(const Possibilities &o) {
+        void setOutcome(const Possibility &o) {
             outcome = o;
+        }
+        // makes to result objects comparable
+        bool equals(const Result &r) const {
+            return (getOutcome() == r.getOutcome());
+        }
+        // makes the comparison via the == and != operator possible
+        bool operator==(const Result &r) const {
+            return equals(r);
+        }
+        bool operator!=(const Result &r) const {
+            return !equals(r);
         }
         // convert to double
         double getOutcomeAsDouble() const {

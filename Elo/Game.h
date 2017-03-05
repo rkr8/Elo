@@ -38,6 +38,19 @@ namespace Elo {
         void setPlayerB(Player &b) {
             playerB = b;
         }
+        // makes to game objects comparable
+        bool equals(const Game &g) const {
+            return (HARDNESS == g.HARDNESS &&
+                getPlayerA() == g.getPlayerA() &&
+                getPlayerB() == g.getPlayerB());
+        }
+        // makes the comparison via the == and != operator possible
+        bool operator==(const Game &g) const {
+            return equals(g);
+        }
+        bool operator!=(const Game &g) const {
+            return !equals(g);
+        }
         // returns the probability that playerA wins the game
         double winningChancePlayerA() {
             return 1. / (1. + pow(10., (playerB.getElo() - playerA.getElo()) / 400.));

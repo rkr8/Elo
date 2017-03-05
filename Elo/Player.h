@@ -34,6 +34,18 @@ namespace Elo {
         void setElo(double e) {
             elo = e;
         }
+        // makes to player objects comparable
+        bool equals(const Player &p) const {
+            return (getName() == p.getName() &&
+                getElo() == p.getElo());
+        }
+        // makes the comparison via the == and != operator possible
+        bool operator==(const Player &p) const {
+            return equals(p);
+        }
+        bool operator!=(const Player &p) const {
+            return !equals(p);
+        }
 	};
     
     // makes the output via the << operator possible

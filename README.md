@@ -26,6 +26,9 @@ Here is an example, that shows the most important features of this library:
         // generate two player objects
         Player p("Magnus Carlsen", 2840.);
         Player q("Viswanathan Anand", 2786.);
+
+        // compare both player objects
+        cout << (p == q) << endl;
         
         // generate the game object
         Game g(10., p, q);
