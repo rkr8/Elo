@@ -31,7 +31,7 @@ namespace Elo {
         void setOutcome(const Possibility &o) {
             outcome = o;
         }
-        // makes to result objects comparable
+        // makes two result objects comparable
         bool equals(const Result &r) const {
             return (getOutcome() == r.getOutcome());
         }

@@ -38,7 +38,7 @@ namespace Elo {
         void setPlayerB(Player &b) {
             playerB = b;
         }
-        // makes to game objects comparable
+        // makes two game objects comparable
         bool equals(const Game &g) const {
             return (HARDNESS == g.HARDNESS &&
                 getPlayerA() == g.getPlayerA() &&
