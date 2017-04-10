@@ -21,28 +21,26 @@ Here is an example, that shows the most important features of this library:
 
 using namespace std;
 
-int main() {
+int main()
+{
     using namespace Elo;
 
-    // generate two player objects
     Player p("Magnus Carlsen", 2840.);
     Player q("Viswanathan Anand", 2786.);
 
-    // compare both player objects
     cout << (p == q) << endl;
 
-    // generate the game object
     Game g(10., p, q);
 
-    // Magnus Carlsen won
     Result r(Result::WIN);
 
-    cout << r << endl << g << endl;
+    cout << r << endl
+         << g << endl;
 
-    // update both player's Elo
     g.updateElo(r);
 
-    cout << p << endl << q << endl;
+    cout << p << endl
+         << q << endl;
 
     return 0;
 }
