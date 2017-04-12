@@ -2,48 +2,33 @@
 
 ## Badges
 
-[![Build Status](https://travis-ci.org/rkr8/Elo.svg?branch=master)](https://travis-ci.org/rkr8/Elo)
+* Travis CI: [![Build Status](https://travis-ci.org/rkr8/Elo.svg?branch=master)](https://travis-ci.org/rkr8/Elo)
 
-## Description
-
-### About
+## About
 
 This is a small recreation of the Elo rating system.
 
-### How to
+## Usage
 
-To use this library, simply include `Elo/Elo.h` in your program.
-Here is an example, that shows the most important features of this library:
+To use this library, simply include `Elo/Elo.h` into you program.
+An [example program](example.cpp) illustrates, how this library works.
 
-```c++
-#include <iostream>
-#include "Elo/Elo.h"
+## Contribute
 
-using namespace std;
+### Code
 
-int main()
-{
-    using namespace Elo;
+Feel free, to open a new pull request.
+Just make sure, you use a matching coding style.
 
-    Player p("Magnus Carlsen", 2840.);
-    Player q("Viswanathan Anand", 2786.);
+### Commit Messages
 
-    cout << (p == q) << endl;
+Commit messages should be formatted like [this](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines).
+To simplify the formatting process, you can use [commitizen](https://www.npmjs.com/package/commitizen).
 
-    Game g(10., p, q);
+### Signed Commits
 
-    Result r(Result::WIN);
+Signed commits are welcome! It would be great if you could communicate with using the same PGP key.
 
-    cout << r << endl
-         << g << endl;
+### Collaborators
 
-    g.updateElo(r);
-
-    cout << p << endl
-         << q << endl;
-
-    return 0;
-}
-```
-
-To build and run this example, clone the repository and run `make && ./example`.
+Active pull request creators will be added as collaborators, while inactive collaborators will be removed after a certain time.
