@@ -1,0 +1,15 @@
+#include <string>
+
+#ifndef __BUILDSETTINGS_H__
+#define __BUILDSETTINGS_H__
+
+namespace Elo
+{
+
+using namespace std;
+
+const string VERSION = "@Elo_VERSION@";
+
+}
+
+#endif

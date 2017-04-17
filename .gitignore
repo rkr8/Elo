@@ -1,4 +1,8 @@
 
+### Elo ###
+# Build Files
+build/
+
 # Created by https://www.gitignore.io/api/git,c++,linux,cmake,macos,windows,eclipse,visualstudio,visualstudiocode
 
 ### C++ ###
