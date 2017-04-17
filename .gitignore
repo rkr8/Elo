@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/windows,macos,linux,git,eclipse,c++,visualstudio,visualstudiocode
+# Created by https://www.gitignore.io/api/git,c++,linux,cmake,macos,windows,eclipse,visualstudio,visualstudiocode
 
 ### C++ ###
 # Prerequisites
@@ -35,6 +35,17 @@
 *.out
 *.app
 
+### CMake ###
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
 ### Eclipse ###
 
 .metadata
@@ -49,9 +60,6 @@ local.properties
 .loadpath
 .recommenders
 
-# Eclipse Core
-.project
-
 # External tool builders
 .externalToolBuilders/
 
@@ -63,9 +71,6 @@ local.properties
 
 # CDT-specific (C/C++ Development Tooling)
 .cproject
-
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
 
 # Java annotation processor (APT)
 .factorypath
@@ -87,6 +92,11 @@ local.properties
 
 # Code Recommenders
 .recommenders/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
 
 ### Git ###
 *.orig
@@ -113,7 +123,6 @@ local.properties
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -380,6 +389,7 @@ UpgradeLog*.htm
 # SQL Server files
 *.mdf
 *.ldf
+*.ndf
 
 # Business Intelligence projects
 *.rdl.data
@@ -438,4 +448,13 @@ __pycache__/
 # tools/**
 # !tools/packages.config
 
-# End of https://www.gitignore.io/api/windows,macos,linux,git,eclipse,c++,visualstudio,visualstudiocode
+# Telerik's JustMock configuration file
+*.jmconfig
+
+# BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# End of https://www.gitignore.io/api/git,c++,linux,cmake,macos,windows,eclipse,visualstudio,visualstudiocode
