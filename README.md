@@ -8,6 +8,12 @@
 
 This is a small recreation of the Elo rating system.
 
+## Installation
+
+First, clone the repository and `cd` into it using `git clone https://github.com/rkr8/Elo.git && cd Elo`.
+Next, execute `cmake .` to generate platform-specific build files. Now you need to build and install the library.
+If you are using Linux or macOS you can do this by executing `sudo make install`.
+
 ## Usage
 
 To use this library, simply include `Elo/Elo.h` into you program.
