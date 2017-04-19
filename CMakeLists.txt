@@ -10,17 +10,10 @@ exec_program (
 
 configure_file (
     ${PROJECT_SOURCE_DIR}/src/BuildSettings.h.in
-    ${PROJECT_BINARY_DIR}/build/BuildSettings.h
-)
-
-# copy other header files to build directory
-file (
-    COPY ${PROJECT_SOURCE_DIR}/src/
-    DESTINATION ${PROJECT_BINARY_DIR}/build
-    PATTERN "BuildSettings.h.in" EXCLUDE
+    ${PROJECT_SOURCE_DIR}/include/BuildSettings.h
 )
 
 install (
-    DIRECTORY ${PROJECT_BINARY_DIR}/build/
+    DIRECTORY ${PROJECT_BINARY_DIR}/include/
     DESTINATION include/Elo
 )
