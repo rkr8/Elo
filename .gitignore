@@ -2,6 +2,10 @@
 ### Elo ###
 # Build Files
 include/BuildSettings.h
+# Google Test
+googletest-build
+googletest-download
+googletest-src
 
 # Created by https://www.gitignore.io/api/git,c++,linux,cmake,macos,windows,eclipse,visualstudio,visualstudiocode
 
