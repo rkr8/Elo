@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "Constants.h"
 #include "Player.h"
 
 #ifndef __GAME_H__
@@ -27,7 +28,7 @@ class Game
     Player &playerB;
 
   public:
-    Game(double h, Player &a, Player &b) : HARDNESS(h), playerA(a), playerB(b) {}
+    Game(Player &a, Player &b, double h = DEFAULT_HARDNESS) : playerA(a), playerB(b), HARDNESS(h) {}
     // getters
     const Player &getPlayerA() const
     {

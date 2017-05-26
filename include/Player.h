@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Constants.h"
 
 #ifndef __PLAYER_H__
 #define __PLAYER_H__
@@ -8,9 +9,6 @@ namespace Elo
 {
 
 using namespace std;
-
-const string DEFAULT_NAME = "";
-const double DEFAULT_ELO = 1000.;
 
 /*
  * This class stores the name and Elo of a player.
