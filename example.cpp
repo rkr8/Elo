@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Elo/Elo.h"
+#include "include/Elo.h"
 
 using namespace std;
 
@@ -12,7 +12,7 @@ int main()
 
     cout << (p == q) << endl;
 
-    Game g(10., p, q);
+    Game g(p, q, 10.);
 
     Result r(Result::WIN);
 
