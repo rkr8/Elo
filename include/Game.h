@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <stdexcept>
 #include "Constants.h"
 #include "Player.h"
 
@@ -28,7 +29,11 @@ class Game
     Player &playerB;
 
   public:
-    Game(Player &a, Player &b, double h = DEFAULT_HARDNESS) : playerA(a), playerB(b), HARDNESS(h) {}
+    Game(Player &a, Player &b, double h = DEFAULT_HARDNESS) : playerA(a),
+                                                              playerB(b),
+                                                              HARDNESS(h < 0.
+                                                                           ? throw invalid_argument("HARDNESS can't be negative.")
+                                                                           : h) {}
     // getters
     const Player &getPlayerA() const
     {

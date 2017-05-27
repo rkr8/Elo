@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdexcept>
 #include "Constants.h"
 
 #ifndef __PLAYER_H__
@@ -20,7 +21,10 @@ class Player
     double elo;
 
   public:
-    Player(const string &n = DEFAULT_NAME, double e = DEFAULT_ELO) : name(n), elo(e) {}
+    Player(const string &n = DEFAULT_NAME, double e = DEFAULT_ELO) : name(n),
+                                                                     elo(e < 0.
+                                                                             ? throw invalid_argument("Elo can't be negative.")
+                                                                             : e) {}
     // getters
     const string &getName() const
     {
@@ -37,7 +41,9 @@ class Player
     }
     void setElo(double e)
     {
-        elo = e;
+        elo = e < 0.
+                  ? throw invalid_argument("Elo can't be negative.")
+                  : e;
     }
     // makes two player objects comparable
     bool equals(const Player &p) const
