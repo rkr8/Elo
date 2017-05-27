@@ -1,7 +1,7 @@
-#include <string>
-
 #ifndef __BUILDSETTINGS_H__
 #define __BUILDSETTINGS_H__
+
+#include <string>
 
 namespace Elo
 {

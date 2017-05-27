@@ -1,10 +1,10 @@
+#ifndef __PLAYER_H__
+#define __PLAYER_H__
+
 #include <iostream>
 #include <string>
 #include <stdexcept>
 #include "Constants.h"
-
-#ifndef __PLAYER_H__
-#define __PLAYER_H__
 
 namespace Elo
 {

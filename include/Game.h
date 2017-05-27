@@ -1,11 +1,11 @@
+#ifndef __GAME_H__
+#define __GAME_H__
+
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
 #include "Constants.h"
 #include "Player.h"
-
-#ifndef __GAME_H__
-#define __GAME_H__
 
 namespace Elo
 {
