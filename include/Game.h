@@ -19,6 +19,9 @@ using namespace std;
  */
 class Game
 {
+    /*
+     * Attributes of the Game class
+     */
   public:
     // this constant value specifies the impact of each game
     const double HARDNESS;
@@ -28,13 +31,17 @@ class Game
     Player &playerA;
     Player &playerB;
 
+    /*
+     * Methods of the Game class
+     */
   public:
     Game(Player &a, Player &b, double h = DEFAULT_HARDNESS) : playerA(a),
                                                               playerB(b),
-                                                              HARDNESS(h < 0.
+                                                              HARDNESS(h < 0. // throws an invalid argument exception on negative HARDNESS
                                                                            ? throw invalid_argument("HARDNESS can't be negative.")
-                                                                           : h) {}
-    // getters
+                                                                           : h)
+    {
+    }
     const Player &getPlayerA() const
     {
         return playerA;
@@ -43,7 +50,6 @@ class Game
     {
         return playerB;
     }
-    // setters
     void setPlayerA(Player &a)
     {
         playerA = a;
@@ -68,16 +74,43 @@ class Game
     {
         return !equals(g);
     }
+    void updateElo(const Result &r) // Result for playerA
+    {
+        // Elo-specific formulas
+        playerA.setElo(playerA.getElo() +
+                       HARDNESS *
+                           (convertResultToDouble(r) -
+                            winningChancePlayerA()));
+        playerB.setElo(playerB.getElo() +
+                       HARDNESS *
+                           (winningChancePlayerA() -
+                            convertResultToDouble(r)));
+    }
+
+  private:
     // returns the probability that playerA wins the game
-    double winningChancePlayerA()
+    double winningChancePlayerA() const
     {
         return 1. / (1. + pow(10., (playerB.getElo() - playerA.getElo()) / 400.));
     }
-    void updateElo(const Result &r)
+    // Elo formulas require numeric value
+    double convertResultToDouble(const Result &r) const
     {
-        // both formulas are from wikipedia
-        playerA.setElo(playerA.getElo() + HARDNESS * (r.getOutcomeAsDouble() - winningChancePlayerA()));
-        playerB.setElo(playerB.getElo() + HARDNESS * ((1. - r.getOutcomeAsDouble()) - (1. - winningChancePlayerA())));
+        switch (r)
+        {
+        case WIN:
+            return 1.;
+            break;
+        case DRAW:
+            return .5;
+            break;
+        case LOSE:
+            return 0.;
+            break;
+        default: // propably won't happen
+            return DEFAULT_RESULT;
+            break;
+        }
     }
 };
 

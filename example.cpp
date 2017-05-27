@@ -12,14 +12,11 @@ int main()
 
     cout << (p == q) << endl;
 
-    Game g(p, q, 10.);
+    Game g(p, q);
 
-    Result r(Result::WIN);
+    cout << g << endl;
 
-    cout << r << endl
-         << g << endl;
-
-    g.updateElo(r);
+    g.updateElo(WIN); // Magnus won!
 
     cout << p << endl
          << q << endl;

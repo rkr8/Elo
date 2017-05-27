@@ -16,15 +16,23 @@ using namespace std;
  */
 class Player
 {
+    /*
+     * Attributes of the Player class
+     */
   private:
     string name;
     double elo;
 
+    /*
+     * Methods of the Game class
+     */
   public:
     Player(const string &n = DEFAULT_NAME, double e = DEFAULT_ELO) : name(n),
-                                                                     elo(e < 0.
+                                                                     elo(e < 0. // throws an invalid argument exception on negative elo
                                                                              ? throw invalid_argument("Elo can't be negative.")
-                                                                             : e) {}
+                                                                             : e)
+    {
+    }
     // getters
     const string &getName() const
     {
@@ -41,7 +49,7 @@ class Player
     }
     void setElo(double e)
     {
-        elo = e < 0.
+        elo = e < 0. // throws an invalid argument exception on negative elo
                   ? throw invalid_argument("Elo can't be negative.")
                   : e;
     }

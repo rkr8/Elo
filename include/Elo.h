@@ -1,10 +1,11 @@
 #ifndef __ELO_H__
 #define __ELO_H__
 
-// use less space by just including Elo.h
+// bundle includes
 #include "BuildSettings.h"
 #include "Player.h"
 #include "Result.h"
+#include "Constants.h"
 #include "Game.h"
 
 #endif
