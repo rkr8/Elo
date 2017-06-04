@@ -16,29 +16,29 @@ using namespace std;
  */
 class Player
 {
-    /*
+  /*
      * Attributes of the Player class
      */
-  private:
-    string name;
-    double elo;
+private:
+  string name;
+  double elo;
 
-    /*
+  /*
      * Methods of the Game class
      */
-  public:
-    Player(const string &n, double e);
-    // getters
-    const string &getName() const;
-    double getElo() const;
-    // setters
-    void setName(const string &n);
-    void setElo(double e);
-    // makes two player objects comparable
-    bool equals(const Player &p) const;
-    // makes the comparison via the == and != operator possible
-    bool operator==(const Player &p) const;
-    bool operator!=(const Player &p) const;
+public:
+  Player(const string &n = DEFAULT_NAME, double e = DEFAULT_ELO);
+  // getters
+  const string &getName() const;
+  double getElo() const;
+  // setters
+  void setName(const string &n);
+  void setElo(double e);
+  // makes two player objects comparable
+  bool equals(const Player &p) const;
+  // makes the comparison via the == and != operator possible
+  bool operator==(const Player &p) const;
+  bool operator!=(const Player &p) const;
 };
 
 // makes the output via the << operator possible

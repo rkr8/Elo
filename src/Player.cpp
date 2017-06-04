@@ -6,10 +6,10 @@ namespace Elo
 {
 using namespace std;
 
-Player::Player(const string &n = DEFAULT_NAME, double e = DEFAULT_ELO) : name(n),
-                                                                         elo(e < 0. // throws an invalid argument exception on negative elo
-                                                                                 ? throw invalid_argument("Elo can't be negative.")
-                                                                                 : e)
+Player::Player(const string &n, double e) : name(n),
+                                            elo(e < 0. // throws an invalid argument exception on negative elo
+                                                    ? throw invalid_argument("Elo can't be negative.")
+                                                    : e)
 {
 }
 

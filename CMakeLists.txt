@@ -33,6 +33,16 @@ configure_file (
 )
 
 #
+# Build Library
+#
+
+add_library (
+    Elo
+    ${PROJECT_SOURCE_DIR}/src/Game.cpp
+    ${PROJECT_SOURCE_DIR}/src/Player.cpp
+)
+
+#
 # Installation
 #
 

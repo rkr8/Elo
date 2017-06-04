@@ -36,7 +36,7 @@ private:
    * Methods of the Game class
    */
 public:
-  Game(Player &a, Player &b, double h);
+  Game(Player &a, Player &b, double h = DEFAULT_HARDNESS);
   const Player &getPlayerA() const;
   const Player &getPlayerB() const;
   void setPlayerA(Player &a);

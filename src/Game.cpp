@@ -9,11 +9,11 @@ namespace Elo
 
 using namespace std;
 
-Game::Game(Player &a, Player &b, double h = DEFAULT_HARDNESS) : playerA(a),
-                                                                playerB(b),
-                                                                HARDNESS(h < 0. // throws an invalid argument exception on negative HARDNESS
-                                                                             ? throw invalid_argument("HARDNESS can't be negative.")
-                                                                             : h)
+Game::Game(Player &a, Player &b, double h) : playerA(a),
+                                             playerB(b),
+                                             HARDNESS(h < 0. // throws an invalid argument exception on negative HARDNESS
+                                                          ? throw invalid_argument("HARDNESS can't be negative.")
+                                                          : h)
 {
 }
 
