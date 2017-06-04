@@ -27,54 +27,22 @@ class Player
      * Methods of the Game class
      */
   public:
-    Player(const string &n = DEFAULT_NAME, double e = DEFAULT_ELO) : name(n),
-                                                                     elo(e < 0. // throws an invalid argument exception on negative elo
-                                                                             ? throw invalid_argument("Elo can't be negative.")
-                                                                             : e)
-    {
-    }
+    Player(const string &n, double e);
     // getters
-    const string &getName() const
-    {
-        return name;
-    }
-    double getElo() const
-    {
-        return elo;
-    }
+    const string &getName() const;
+    double getElo() const;
     // setters
-    void setName(const string &n)
-    {
-        name = n;
-    }
-    void setElo(double e)
-    {
-        elo = e < 0. // throws an invalid argument exception on negative elo
-                  ? throw invalid_argument("Elo can't be negative.")
-                  : e;
-    }
+    void setName(const string &n);
+    void setElo(double e);
     // makes two player objects comparable
-    bool equals(const Player &p) const
-    {
-        return (getName() == p.getName() &&
-                getElo() == p.getElo());
-    }
+    bool equals(const Player &p) const;
     // makes the comparison via the == and != operator possible
-    bool operator==(const Player &p) const
-    {
-        return equals(p);
-    }
-    bool operator!=(const Player &p) const
-    {
-        return !equals(p);
-    }
+    bool operator==(const Player &p) const;
+    bool operator!=(const Player &p) const;
 };
 
 // makes the output via the << operator possible
-ostream &operator<<(ostream &o, const Player &p)
-{
-    o << p.getName() << ", " << p.getElo();
-}
+ostream &operator<<(ostream &o, const Player &p);
 
 }
 
