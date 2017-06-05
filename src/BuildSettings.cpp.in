@@ -1,7 +1,5 @@
-#ifndef __BUILDSETTINGS_H__
-#define __BUILDSETTINGS_H__
-
 #include <string>
+#include "../include/BuildSettings.h"
 
 namespace Elo
 {
@@ -11,5 +9,3 @@ using namespace std;
 const string VERSION = "@Elo_VERSION@";
 
 }
-
-#endif

@@ -26,10 +26,10 @@ exec_program (
     OUTPUT_VARIABLE Elo_VERSION
 )
 
-# write version number to header file
+# write version number to BuildSettings.cpp
 configure_file (
-    ${PROJECT_SOURCE_DIR}/src/BuildSettings.h.in
-    ${PROJECT_SOURCE_DIR}/include/BuildSettings.h
+    ${PROJECT_SOURCE_DIR}/src/BuildSettings.cpp.in
+    ${PROJECT_SOURCE_DIR}/src/BuildSettings.cpp
 )
 
 #
@@ -38,6 +38,7 @@ configure_file (
 
 add_library (
     Elo
+    ${PROJECT_SOURCE_DIR}/src/BuildSettings.cpp
     ${PROJECT_SOURCE_DIR}/src/Game.cpp
     ${PROJECT_SOURCE_DIR}/src/Player.cpp
 )
@@ -46,10 +47,11 @@ add_library (
 # Installation
 #
 
-install (
-    DIRECTORY ${PROJECT_BINARY_DIR}/include/
-    DESTINATION include/Elo
-)
+# TODO: upgrade installation process
+# install (
+#     DIRECTORY ${PROJECT_BINARY_DIR}/include/
+#     DESTINATION include/Elo
+# )
 
 #
 # Google Test
