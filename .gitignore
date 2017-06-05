@@ -1,7 +1,7 @@
 
 ### Elo ###
 # Build Files
-include/BuildSettings.h
+src/BuildSettings.cpp
 # Google Test
 googletest-build
 googletest-download
