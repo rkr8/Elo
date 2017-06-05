@@ -6,7 +6,7 @@
 
 ## About
 
-This is a small recreation of the Elo rating system.
+This is an easy-to-use library for the [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system).
 
 ## [Building and Installation](BUILD.md)
 
