@@ -47,11 +47,17 @@ add_library (
 # Installation
 #
 
-# TODO: upgrade installation process
-# install (
-#     DIRECTORY ${PROJECT_BINARY_DIR}/include/
-#     DESTINATION include/Elo
-# )
+# install header files
+install (
+    DIRECTORY ${PROJECT_SOURCE_DIR}/include/
+    DESTINATION include/Elo
+)
+
+# install static library file
+install (
+    TARGETS Elo
+    DESTINATION lib
+)
 
 #
 # Google Test
