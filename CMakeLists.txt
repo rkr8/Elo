@@ -111,21 +111,22 @@ if (BUILD_TESTS)
 
     # Compile tests
     add_executable (
-        exampleTest
-        ${PROJECT_SOURCE_DIR}/tests/exampleTest.cpp
+        allTests
+        ${PROJECT_SOURCE_DIR}/tests/GameTest.cpp
     )
 
-    # Link google test library
+    # Link Elo and google test library
     target_link_libraries (
-        exampleTest
+        allTests
+        Elo
         gtest
         gtest_main
     )
 
     # Add test
     add_test (
-        exampleTest
-        exampleTest
+        allTests
+        allTests
     )
 
 endif (BUILD_TESTS)
