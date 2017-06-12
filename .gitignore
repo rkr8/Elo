@@ -1,5 +1,7 @@
 
 ### Elo ###
+# Build Directory
+build
 # Build Files
 src/BuildSettings.cpp
 # Google Test

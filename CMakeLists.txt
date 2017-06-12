@@ -109,6 +109,23 @@ if (BUILD_TESTS)
 
     include_directories (include)
 
-    # TODO: Add tests
+    # Compile tests
+    add_executable (
+        exampleTest
+        ${PROJECT_SOURCE_DIR}/tests/exampleTest.cpp
+    )
+
+    # Link google test library
+    target_link_libraries (
+        exampleTest
+        gtest
+        gtest_main
+    )
+
+    # Add test
+    add_test (
+        exampleTest
+        exampleTest
+    )
 
 endif (BUILD_TESTS)
